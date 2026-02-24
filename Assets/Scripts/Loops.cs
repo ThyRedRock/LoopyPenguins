@@ -1,0 +1,40 @@
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class Loops : MonoBehaviour 
+{
+	// reference to penguin prefab object
+	public GameObject penguinPrefab;
+
+	// location where penguins start on the left
+	public float xStart = -4.0f;
+
+	// amount of space to place between penguins
+	public float xOffset = 2.0f;
+
+	// number of penguins to create
+	public int numPenguins = 5;
+
+	// Use this for initialization
+	void Start () 
+	{
+		// STUDENT CODE GOES HERE
+
+	}
+
+	// Update is called once per frame
+	void Update () 
+	{
+        // if the space bar was just pressed
+        bool clicked = InputSystem.actions.FindAction("Jump").WasPressedThisFrame();
+        if (clicked)
+        {
+			// get all of game objects with the "penguin" tag
+			GameObject[] penguins = GameObject.FindGameObjectsWithTag ("penguin");
+
+			// STUDENT CODE GOES HERE
+
+		}
+		
+	}
+}
