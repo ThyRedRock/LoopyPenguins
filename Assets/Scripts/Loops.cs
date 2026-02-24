@@ -19,14 +19,14 @@ public class Loops : MonoBehaviour
 	void Start () 
 	{
 		// STUDENT CODE GOES HERE
-		int i = 0;
-		while (i < numPenguins)
+		int j = 0;
+		while (j < numPenguins)
 		{
-			float xLocation = xStart + (i * xOffset);
+			float xLocation = xStart + (j * xOffset);
 			Instantiate(penguinPrefab, new Vector3(xLocation, 0, 0), Quaternion.identity);
 
-			i++; //increment the loop var
-    }
+			j++; //increment the loop var
+    	}
 		Instantiate (penguinPrefab, new Vector3(0,0,0), Quaternion.identity);
 
 		for (int i=0; i<numPenguins; i++)
