@@ -26,6 +26,13 @@ public class Loops : MonoBehaviour
 			Instantiate(penguinPrefab, new Vector3(xLocation, 0, 0), Quaternion.identity);
 
 			i++; //increment the loop var
+    }
+		Instantiate (penguinPrefab, new Vector3(0,0,0), Quaternion.identity);
+
+		for (int i=0; i<numPenguins; i++)
+		{
+			float xLocation = xStart + (i * xOffset);
+			Instantiate(penguinPrefab, new Vector3(xLocation, 0, 0), Quaternion.identity);
 		}
 	}
 
