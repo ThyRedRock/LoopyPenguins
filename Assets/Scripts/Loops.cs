@@ -18,6 +18,15 @@ public class Loops : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+		// STUDENT CODE GOES HERE
+		int i = 0;
+		while (i < numPenguins)
+		{
+			float xLocation = xStart + (i * xOffset);
+			Instantiate(penguinPrefab, new Vector3(xLocation, 0, 0), Quaternion.identity);
+
+			i++; //increment the loop var
+    }
 		Instantiate (penguinPrefab, new Vector3(0,0,0), Quaternion.identity);
 
 		for (int i=0; i<numPenguins; i++)
@@ -36,9 +45,14 @@ public class Loops : MonoBehaviour
         {
 			// get all of game objects with the "penguin" tag
 			GameObject[] penguins = GameObject.FindGameObjectsWithTag ("penguin");
-
+			int i = penguins.Length-1;
 			// STUDENT CODE GOES HERE
-
+			do
+			{
+				penguins[i].SetActive(false);
+				i--;
+			}
+			while (i >= 0);
 		}
 		
 	}
